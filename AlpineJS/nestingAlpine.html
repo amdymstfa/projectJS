@@ -1,0 +1,13 @@
+<html>
+<head>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div x-data="{message1: 'Here is the first parent'}">
+        <div x-data="{message2: 'Here is the second parent'}">
+            <span x-text="message1"></span><br>
+            <span x-text="message2"></span>
+        </div>
+    </div>
+</body>
+</html>
