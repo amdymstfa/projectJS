@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div x-data>
+        <template x-for="element in $store.tables.items" :key="element">
+            <span x-text="element"></span>
+        </template>
+        
+    </div>
+    
+<script>
+    document.addEventListener(
+        'alpine:init', () => {
+            Alpine.store(
+                'tables', {
+                    current: 'first',
+                    items: ['first', 'second', 'third']
+                }
+            )
+        }
+    );
+</script>
+</body>
+</html>
