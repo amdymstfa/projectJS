@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+</head>
+<body>
+    <!-- Consume the component -->
+     <div x-data="dropdown">
+        <button @click="toggle">click</button>
+        <div x-show="open">
+            <option value="">
+                <select name="" id="">1</select>
+                <select name="" id="">2</select>
+                <select name="" id="">3</select>
+            </option>
+        </div>
+     </div>
+    <script>
+        // inialize and creation of my alipine component 
+        document.addEventListener(
+            // initialize alpine
+            'alpine:init', () => {
+                Alpine.data(
+                    'dropdown', () => ({
+                        // initiale state of the element
+                        open:false, 
+
+                        // execpted method
+                        toggle(){
+                            this.open = !this.open
+                        }
+                    })
+                )
+            }
+        );
+    </script>
+</body>
+</html>
