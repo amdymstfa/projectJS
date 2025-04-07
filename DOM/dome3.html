@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- receptacle -->
+    <p id="myParagraph"></p>
+    <button id="myButton"></button>
+    <script>
+        // get element by id
+        let myParagraph = document.getElementById("myParagraph");
+        let myButton = document.getElementById("myButton");
+
+        // insert initial content
+        myParagraph.innerText = 'How are you ? ';
+        myButton.innerText = 'response ';
+
+        let listenner = true ;
+
+        // change the content of paragraph and button
+        myButton.addEventListener(
+            'click', ()=>{
+                myParagraph.innerText = listenner ? 'fine !' : 'How are you ? ';
+                myButton.textContent = listenner ? 'question' : 'response' ;
+                listenner =! listenner;
+            }
+        );
+    </script>
+</body>
+</html>
