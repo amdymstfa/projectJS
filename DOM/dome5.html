@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        body = document.querySelector('body');
+        body.innerHTML = '<header></header>';
+        header = body.querySelector('header');
+        header.innerHTML = '<nav></nav>';
+        nav = header.querySelector('nav');
+        nav.innerHTML = '<ul></ul>';
+        ul = nav.querySelector('ul');
+        table = [
+            "Ayoub", "mstfa", "qwerty", "zxcvb"
+        ];
+        // let tableHTML = table.map(
+        //     name=> `<li>  ${name}  </li>`
+        // );
+        // let tableHTML = table.reduce(
+        //     (liste, name) => `${liste}  <li>  ${name}  </li>`, ''
+        // );
+        let tableHTML = '';
+        table.forEach(name => {
+            tableHTML +=`<li>  ${name}  </li>` ;
+        });
+        ul.insertAdjacentHTML('beforeend', tableHTML);
+    </script>
+</body>
+</html>
