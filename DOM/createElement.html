@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    I am outside div (start)
+    <div class="container">
+        I am start of this container
+            <div id="first">I am first element</div>
+        I am end of this container
+    </div>
+    I am outside div (end)
+        <script>
+            let a = document.getElementsByTagName('div')[0];
+            let div = document.createElement('h1');
+            // div.innerHTML = '<h1>This is a header(append)</h1>';
+            // a.appendChild(div);
+            // div.innerHTML = '<h1>This is a header(prepend)</h1>';
+            // a.prepend(div);
+            // div.innerHTML = '<h1>This is a header(before)</h1>';
+            // a.prepend(div);
+            div.innerHTML = '<h1>This is a header(replaceWith)</h1>';
+            a.replaceWith(div);
+        </script>
+    </body>
+</html>

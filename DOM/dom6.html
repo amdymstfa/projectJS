@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="element1" data-category="music" data-rating="4" data-type="rnb">
+        This is an element with costume attribute
+    </div>
+    <script>
+        element1 = document.querySelector('div');
+        // const element2 = document.createElement('h1');
+        // element2.textContent = 'This is a header';
+
+        // element1.appendChild(element2);
+        let l = element1.dataset.rating;
+        element1.innerHTML = l;
+    </script>
+</body>
+</html>
